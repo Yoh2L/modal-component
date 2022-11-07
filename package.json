@@ -1,38 +1,62 @@
 {
-  "name": "modal-component-library",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "p14-modal-component-library",
+	"author": "Yoh2L",
+	"version": "0.1.1",
+	"description": "React custom component - modal - center screen pop up",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Yoh2L/modal-component.git"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"cross-env": "^7.0.3",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scripts": "5.0.1"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "del -rf dist && SET NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+		"clean": "rimraf dist",
+		"compile": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"env": {
+			"NODE_ENV": "production"
+		}
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
