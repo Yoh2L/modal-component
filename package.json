@@ -1,7 +1,7 @@
 {
 	"name": "p14-modal-component-library",
 	"author": "Yoh2L",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "React custom component - modal - center screen pop up",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
