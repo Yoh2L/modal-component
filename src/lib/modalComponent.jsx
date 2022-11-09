@@ -35,12 +35,10 @@ const Modal = ({ message, onClose }) => {
 	};
 
 	return (
-		<div className="modalWindow" style={modalWindowStyle}>
-			<div className="modalContainer" style={modalContainerStyle}>
-				<button className="modalClose" onClick={onClose}>
-					X
-				</button>
-				<p className="modalText">{message}</p>
+		<div style={modalWindowStyle}>
+			<div style={modalContainerStyle}>
+				<button onClick={onClose}>X</button>
+				<p>{message}</p>
 			</div>
 		</div>
 	);

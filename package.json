@@ -44,7 +44,7 @@
 			"react-app/jest"
 		],
 		"env": {
-			"NODE_ENV": "production"
+			"SET NODE_ENV": "production"
 		}
 	},
 	"browserslist": {
