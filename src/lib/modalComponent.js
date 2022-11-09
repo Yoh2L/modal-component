@@ -1,7 +1,7 @@
 import React from "react";
 
 const Modal = ({ message, onClose }) => {
-	const modalWindowStyle = {
+	const modalwindowStyle = {
 		position: "fixed",
 		top: "0",
 		right: "0",
@@ -17,7 +17,7 @@ const Modal = ({ message, onClose }) => {
 		textAlign: "center",
 	};
 
-	const modalContainerStyle = {
+	const modalcontainerStyle = {
 		display: "flex",
 		position: "absolute",
 		flexDirection: "row",
@@ -35,12 +35,10 @@ const Modal = ({ message, onClose }) => {
 	};
 
 	return (
-		<div className="modalWindow" style={modalWindowStyle}>
-			<div className="modalContainer" style={modalContainerStyle}>
-				<button className="modalClose" onClick={onClose}>
-					X
-				</button>
-				<p className="modalText">{message}</p>
+		<div style={modalwindowStyle}>
+			<div style={modalcontainerStyle}>
+				<button onClick={onClose}>X</button>
+				<p>{message}</p>
 			</div>
 		</div>
 	);
